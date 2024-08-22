@@ -1,5 +1,4 @@
-bash <(curl -Ls neko.nnr.moe/iiii.sh)
-bash <(curl -sSL "https://gitlab.com/xx.stork/script/-/raw/master/auth.sh")
+bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/before.sh")
 
 docker run -d --restart=always --name ant2 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=trojan --api=webapi --webapi_url=https://soga.antlink.cc --webapi_key=JAnFFzsiFTwA9hz7 --cert_domain=sg1.gotout.work --cert_mode=dns --cert_key_length=ec-256 --dns_provider=dns_cf --DNS_CF_Email=x.stork@protonmail.com --DNS_CF_Key=257c340dc19d72e2ee3999355e031c6c6831a --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --proxy_protocol=true --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=12 --user_conn_limit=10 --user_tcp_limit=1000 --soga_key=uaDNHzt4pfu6YX0VmlyqzIea298Yymm3 --node_id=141
 
@@ -59,14 +58,5 @@ docker run -d --restart=always --name km1 -d -v /go/soga/:/etc/soga/ --network h
 docker run -d --restart=always --name qz1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=ss --api=webapi --webapi_url=https://www.qingzhou.world --webapi_key=qingworldQingWord --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --proxy_protocol=true --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=14 --user_conn_limit=5 --user_tcp_limit=1000 --soga_key=jDzd6SHuqBKM9H3CQ9oWUUe0KyJVpPet --node_id=141
 
 docker run -d --restart=always --name lv1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=trojan --api=webapi --webapi_url=https://soga.lvdengjiasu.top --webapi_key=abc1112223344dasdas --cert_domain=sg1.gotout.work --cert_mode=dns --cert_key_length=ec-256 --dns_provider=dns_cf --DNS_CF_Email=x.stork@protonmail.com --DNS_CF_Key=257c340dc19d72e2ee3999355e031c6c6831a --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=9 --proxy_protocol=true --user_conn_limit=10 --user_tcp_limit=1000 --soga_key=7Hl0nBVPXWsZTiH7bqyBQQuoqAEqSFqo --node_id=41
-iptables -F
-iptables -P INPUT ACCEPT   
-iptables -P OUTPUT ACCEPT
-netfilter-persistent save //保存规则文件
-netfilter-persistent reload //载入规则文件
 
-crontab -l | { cat; echo "3 4 * * * systemctl restart docker"; } | crontab -
-
-docker run -it --rm -e ZONE=gotout.work -e SUBDOMAIN=sg1 xwhales/ddns:go
-
-bash /root/ws.sh
+bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/after.sh")
