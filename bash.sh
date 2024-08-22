@@ -46,7 +46,7 @@ docker run --restart=always --name sdy1 -d -v /go/soga/:/etc/soga/ --network hos
 --forbidden_ports=25,26,465,587,143,218,220,24,50,57,105,106,158,209,1109,24554,60177,60179 \
 --node_id=41
 
-docker run -d --restart=always --name kj1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=ss --api=webapi --webapi_url=https://520ape.com --webapi_key=xdmyydsxdmyydsxdmyyds --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --proxy_protocol=true --soga_key=HxkC8uaHfWbqPcpeVuB83pSqtNeHwQ16 --node_id=41
+docker run -d --restart=always --name kj1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=ss --api=webapi --webapi_url=https://520ape.com --webapi_key=xdmyydsxdmyydsxdmyyds --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --proxy_protocol=true --soga_key=Dlsu0lYWQr8hfvG6aUaoNJELWh7bS6Hq --node_id=41
 
 
 docker run -d --restart=always --name grd1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=ss --api=webapi --webapi_url=https://soga.grdcloud.com --webapi_key=FHBWFIAWFAWFAWRARWAR --proxy_protocol=true --soga_key=QBWjAnyKi14xGGhW2FzqYbTsvEp6uIeo --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --node_id=41
