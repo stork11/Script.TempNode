@@ -3,6 +3,8 @@ bash <(curl -sSL "https://gitlab.com/xx.stork/script/-/raw/master/auth.sh")
 
 mkdir /go
 mkdir /go/soga
+wget -N --no-check-certificate "https://raw.githubusercontent.com/stork11/Script.TempNode/main/blockList"
+mv /root/blockList /go/soga/blockList
 
 
 docker run -d --name=go1 --restart=always --log-opt max-size=5m --log-opt max-file=3 -v /go/soga/:/etc/soga/ -p 30001:30000 -p 30001:30000/udp vaxilu/soga:latest --type=sspanel-uim --api=webapi --webapi_url=https://soga.gogoo.work --webapi_key=gotout --proxy_protocol=true --soga_key=Zs3PGbfnYNZB7Eke4LASi0rXvdFWOV1C  --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --server_type=ss --node_id=151
