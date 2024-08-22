@@ -1,10 +1,4 @@
-bash <(curl -Ls neko.nnr.moe/iiii.sh)
-bash <(curl -sSL "https://gitlab.com/xx.stork/script/-/raw/master/auth.sh")
-
-mkdir /go
-mkdir /go/soga
-wget -N --no-check-certificate "https://raw.githubusercontent.com/stork11/Script.TempNode/main/blockList"
-mv /root/blockList /go/soga/blockList
+bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/before.sh")
 
 
 docker run -d --name=go1 --restart=always --log-opt max-size=5m --log-opt max-file=3 -v /go/soga/:/etc/soga/ -p 30001:30000 -p 30001:30000/udp vaxilu/soga:latest --type=sspanel-uim --api=webapi --webapi_url=https://soga.gogoo.work --webapi_key=gotout --proxy_protocol=true --soga_key=Zs3PGbfnYNZB7Eke4LASi0rXvdFWOV1C  --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --server_type=ss --node_id=151
@@ -38,14 +32,4 @@ docker run -d --restart=always --name qz1 -d -v /go/soga/:/etc/soga/ --network h
 
 docker run -d --restart=always --name lv1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=trojan --api=webapi --webapi_url=https://soga.lvdengjiasu.top --webapi_key=abc1112223344dasdas --cert_domain=sg1.gotout.work --cert_mode=dns --cert_key_length=ec-256 --dns_provider=dns_cf --DNS_CF_Email=x.stork@protonmail.com --DNS_CF_Key=257c340dc19d72e2ee3999355e031c6c6831a --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=9 --proxy_protocol=true --user_conn_limit=10 --user_tcp_limit=1000 --soga_key=7Hl0nBVPXWsZTiH7bqyBQQuoqAEqSFqo --node_id=51
 
-iptables -F
-iptables -P INPUT ACCEPT   
-iptables -P OUTPUT ACCEPT
-netfilter-persistent save //保存规则文件
-netfilter-persistent reload //载入规则文件
-
-crontab -l | { cat; echo "3 4 * * * systemctl restart docker"; } | crontab -
-
-docker run -it --rm -e ZONE=gotout.work -e SUBDOMAIN=kr1 xwhales/ddns:go
-
-bash /root/ws.sh
+bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/after.sh")
