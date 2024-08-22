@@ -65,4 +65,4 @@ docker run -d --restart=always --name lv1 -d -v /go/soga/:/etc/soga/ --network h
 
 bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/after.sh")
 
-docker run -it --rm -e ZONE=gotout.work -e SUBDOMAIN=kr1 xwhales/ddns:go
+docker run -it --rm -e ZONE=gotout.work -e SUBDOMAIN=jp1 xwhales/ddns:go
