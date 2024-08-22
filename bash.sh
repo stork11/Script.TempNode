@@ -1,5 +1,4 @@
-bash <(curl -Ls neko.nnr.moe/iiii.sh)
-bash <(curl -sSL "https://gitlab.com/xx.stork/script/-/raw/master/auth.sh")
+bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/before.sh")
 
 docker run -d --restart=always --name ant2 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=trojan --api=webapi --webapi_url=https://soga.antlink.cc --webapi_key=JAnFFzsiFTwA9hz7 --cert_domain=jp1.gotout.work --cert_mode=dns --cert_key_length=ec-256 --dns_provider=dns_cf --DNS_CF_Email=x.stork@protonmail.com --DNS_CF_Key=257c340dc19d72e2ee3999355e031c6c6831a --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --proxy_protocol=true --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=12 --user_conn_limit=10 --user_tcp_limit=1000 --soga_key=uaDNHzt4pfu6YX0VmlyqzIea298Yymm3 --node_id=131
 
@@ -15,11 +14,8 @@ docker run --restart=always --name azi1 -d -v /go/soga/:/etc/soga/ --network hos
 docker run -d --name=go-v1 --network host --restart=always --log-opt max-size=5m --log-opt max-file=3 -v /go/soga/:/etc/soga/ vaxilu/soga:latest --type=sspanel-uim  --api=webapi --webapi_url=https://soga.gogoo.work --webapi_key=gotout --proxy_protocol=true --soga_key=Zs3PGbfnYNZB7Eke4LASi0rXvdFWOV1C  --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --server_type=v2ray --node_id=3321
 
 docker run -d --name=go1 --restart=always --log-opt max-size=5m --log-opt max-file=3 -v /go/soga/:/etc/soga/ -p 30001:30000 -p 30001:30000/udp vaxilu/soga:latest --type=sspanel-uim --api=webapi --webapi_url=https://soga.gogoo.work --webapi_key=gotout --proxy_protocol=true --soga_key=Zs3PGbfnYNZB7Eke4LASi0rXvdFWOV1C  --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --server_type=ss --node_id=131
-
 docker run -d --name=go-s2 --restart=always --log-opt max-size=5m --log-opt max-file=3 -v /go/soga/:/etc/soga/ -p 32301:30000 -p 32301:30000/udp vaxilu/soga:latest --type=sspanel-uim --api=webapi --webapi_url=https://soga.gogoo.work --webapi_key=gotout --proxy_protocol=true --soga_key=Zs3PGbfnYNZB7Eke4LASi0rXvdFWOV1C  --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --server_type=ss --node_id=14301
-
-docker run -d --name=go-ss3 --restart=always --log-opt max-size=5m --log-opt max-file=3 -v /go/soga/:/etc/soga/ -p 30531:30000 -p 30531:30000/udp xwhales/soga:go --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --server_type=ss --node_id=50031
-
+docker run -d --name=go-ss3 --restart=always --log-opt max-size=5m --log-opt max-file=3 -v /go/soga/:/etc/soga/ -p 30531:30000 -p 30531:30000/udp vaxilu/soga:latest --type=sspanel-uim --api=webapi --webapi_url=https://soga.gogoo.work --webapi_key=gotout --proxy_protocol=true --soga_key=Zs3PGbfnYNZB7Eke4LASi0rXvdFWOV1C  --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --server_type=ss --node_id=50031
 
 docker run -d --restart=always --name gs1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=ss --api=webapi --webapi_url=https://soga.gscloud.icu --webapi_key=XV39bmeTCoqYWD6o --proxy_protocol=true --soga_key=L8uGlV3UAgVnyt2sbBibzBMIcToAKmQg  --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --node_id=31
 
@@ -67,14 +63,4 @@ docker run -d --restart=always --name qz1 -d -v /go/soga/:/etc/soga/ --network h
 
 docker run -d --restart=always --name lv1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=trojan --api=webapi --webapi_url=https://soga.lvdengjiasu.top --webapi_key=abc1112223344dasdas --cert_domain=jp1.gotout.work --cert_mode=dns --cert_key_length=ec-256 --dns_provider=dns_cf --DNS_CF_Email=x.stork@protonmail.com --DNS_CF_Key=257c340dc19d72e2ee3999355e031c6c6831a --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=9 --proxy_protocol=true --user_conn_limit=10 --user_tcp_limit=1000 --soga_key=7Hl0nBVPXWsZTiH7bqyBQQuoqAEqSFqo --node_id=31
 
-iptables -F
-iptables -P INPUT ACCEPT   
-iptables -P OUTPUT ACCEPT
-netfilter-persistent save //保存规则文件
-netfilter-persistent reload //载入规则文件
-
-crontab -l | { cat; echo "3 4 * * * systemctl restart docker"; } | crontab -
-
-docker run -it --rm -e ZONE=gotout.work -e SUBDOMAIN=jp1 xwhales/ddns:go
-
-bash /root/ws.sh
+bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/after.sh")
