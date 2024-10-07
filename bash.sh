@@ -59,6 +59,8 @@ docker run -d --restart=always --name qz1 -d -v /go/soga/:/etc/soga/ --network h
 
 docker run -d --restart=always --name lv1 -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=trojan --api=webapi --webapi_url=https://soga.lvdengjiasu.top --webapi_key=abc1112223344dasdas --cert_domain=sg1.gotout.work --cert_mode=dns --cert_key_length=ec-256 --dns_provider=dns_cf --DNS_CF_Email=x.stork@protonmail.com --DNS_CF_Key=257c340dc19d72e2ee3999355e031c6c6831a --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=9 --proxy_protocol=true --user_conn_limit=10 --user_tcp_limit=1000 --soga_key=7Hl0nBVPXWsZTiH7bqyBQQuoqAEqSFqo --node_id=41
 
+docker run -d --restart=always --name bl -d -v /go/soga/:/etc/soga/ --network host vaxilu/soga:latest --type=v2board --server_type=trojan --api=webapi --webapi_url=https://soga.sulian.info --webapi_key=vsdiubs85fg1nftsdgbfgmergrth --cert_domain=sg1.gotout.work --cert_mode=dns --cert_key_length=ec-256 --dns_provider=dns_cf --DNS_CF_Email=x.stork@protonmail.com --DNS_CF_Key=257c340dc19d72e2ee3999355e031c6c6831a --forbidden_ports=22,24,25,26,50,57,105,106,109,110,143,158,209,218,220,465,587,993,995,1109 --proxy_protocol=true --redis_enable=true --redis_addr=redis.wocao.one:6379 --redis_password=pluto.. --redis_db=9 --user_conn_limit=10 --user_tcp_limit=1000 --soga_key=MmCBB5rjzkILtxiGvXaHyR9HoHCTxgok --node_id=141
+
 bash <(curl -sSL "https://raw.githubusercontent.com/stork11/Script.TempNode/main/after.sh")
 
 docker run -it --rm -e ZONE=gotout.work -e SUBDOMAIN=sg1 xwhales/ddns:go
